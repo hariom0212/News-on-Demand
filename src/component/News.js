@@ -79,9 +79,9 @@ export class News extends Component {
         <h1 className="text-center" style={{width: '35px, 0px', marginTop: '90px'}}>News OnDemand - Top Headlines</h1>
         {this.state.loading && <Spinner/>}
         <InfiniteScroll
-          dataLength={this.state.articles}
+          dataLength={this.state.articles.length}
           next={this.fetchMoreData}
-          hasMore={this.state.articles !== this.state.totalResults}
+          hasMore={this.state.articles.length !== this.state.totalResults}
           loader={<Spinner/>}
         >
         <div className="container">
